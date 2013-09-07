@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Collaborative</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string-array name="collaborators">
+        <item>Arredondo Rivera Jose Guadalupe</item>
+        <item>Barrientos Sandoval Juan Luis</item>
+        <item>Casillas Perez Soto Luis Ramón</item>
+        <item>Gama Sio David Cesar</item>
+        <item>Gutierrez Olivares Marcelo</item>
+        <item>Gomez Varela Luis Héctor</item>
+        <item>Jaime Varela Jesus</item>
+        <item>Luna Lugo Jorge Guillermo</item> 
+        <item>Maldonado Martínez Jose Harvynzon</item>
+        <item>Munoz Morales Miguel Angel</item>
+    </string-array>
+</resources>
