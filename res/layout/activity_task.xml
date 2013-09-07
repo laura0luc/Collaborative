@@ -96,15 +96,23 @@
         android:inputType="date" />
 
     <!--Cambiar el onClick=showDialog, por  android:onClick="save"-->
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     <Button
         android:id="@+id/button2"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/end"
+<<<<<<< HEAD
         android:layout_centerHorizontal="true"
         android:onClick="save"
+=======
+        android:layout_centerHorizontal="true"   
+        android:onClick="showDialog"
+>>>>>>> master
         android:text="Enter" />
 
     <ListView

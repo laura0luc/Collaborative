@@ -5,7 +5,11 @@ package edu.itesm.collaborative;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+<<<<<<< HEAD
 //import edu.itesm.db.TaskDAO;
+=======
+import edu.itesm.db.TaskDAO;
+>>>>>>> master
 import edu.itesm.pojo.Project;
 import edu.itesm.pojo.Task;
 import android.annotation.SuppressLint;
@@ -30,7 +34,11 @@ import android.widget.Toast;
 public class TaskActivity extends ListActivity {
 	private Spinner spinner;
 	Task task;
+<<<<<<< HEAD
 	//TaskDAO dao;
+=======
+	TaskDAO dao;
+>>>>>>> master
 	ArrayAdapter<CharSequence> adaptador;
 	ArrayAdapter<String> adaptadorList;
 	Project project;
@@ -39,9 +47,14 @@ public class TaskActivity extends ListActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.activity_task);
+<<<<<<< HEAD
 		project=Project.getInstance();
 		//dao= new TaskDAO(this.getApplicationContext());
 		//dao.open();
+=======
+		dao= new TaskDAO(this.getApplicationContext());
+		dao.open();
+>>>>>>> master
 		task= new Task();
 		//Adaptador para el spinner
 		spinner=(Spinner) this.findViewById(R.id.spinner1);
@@ -72,7 +85,28 @@ public class TaskActivity extends ListActivity {
 		adaptadorList.notifyDataSetChanged();
 		
 	}
+<<<<<<< HEAD
 	public void save(View v){
+=======
+	//Agregado 4» sesion
+	public void doPositiveClick(){
+		Toast.makeText(this, "Click positivo", Toast.LENGTH_LONG).show();
+		save();
+	}
+	//Agregado 4» sesion
+	public void doNegativeClick(){
+		
+		Toast.makeText(this, "Click negativo", Toast.LENGTH_LONG).show();
+		
+	}
+	//Agregado 4» sesion
+	public void showDialog(View v){
+		EjemploFragment ejemplo=EjemploFragment.newInstance("Muy seguro");
+		ejemplo.show(getFragmentManager(), "Dialog");
+	}
+	//public void save(View v){
+	public void save(){
+>>>>>>> master
 		String taskName= ((EditText)this.findViewById(R.id.taskName)).getText().toString();
 		String startSt=((EditText)this.findViewById(R.id.start)).getText().toString();
 		String endSt=((EditText)this.findViewById(R.id.end)).getText().toString();
@@ -88,9 +122,17 @@ public class TaskActivity extends ListActivity {
 		}catch(Exception e){
 			Log.e("save", e.getMessage());			
 		}
+<<<<<<< HEAD
 		project.addTask(task);
 /*		dao.addTask(task);
 		dao.close();*/
+=======
+		//project=Project.getInstance();
+		//Toast.makeText(getApplicationContext(), project.getTasks().get(0).getTask(), Toast.LENGTH_LONG).show();
+		//project.addTask(task);
+		dao.addTask(task);
+		dao.close();
+>>>>>>> master
 		Intent i= new Intent(getApplicationContext(), ListTasks.class);
 		startActivity(i);
 				
